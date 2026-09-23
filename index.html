@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#071318" />
+    <meta name="description" content="Uma brincadeira tranquila para investigar o ambiente e respirar fundo." />
+    <title>Detector de Espíritos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+        <span class="brand-name">NIGHTWATCH <b>// 04</b></span>
+        <span class="status-light"><i></i> ONLINE</span>
+      </header>
+
+      <main>
+        <section class="screen screen-start is-active" data-screen="start" aria-labelledby="main-title">
+          <div class="intro-copy reveal">
+            <p class="eyebrow"><span></span> protocolo de tranquilidade</p>
+            <h1 id="main-title">Detector<br /><em>de espíritos</em></h1>
+            <p class="subtitle">Faça uma varredura no ambiente.<br />A gente verifica tudo para você.</p>
+          </div>
+
+          <div class="scanner scanner-start reveal reveal-delay" aria-hidden="true">
+            <div class="scanner-halo"></div>
+            <div class="scanner-grid"></div>
+            <div class="scanner-ring ring-outer"></div>
+            <div class="scanner-ring ring-middle"></div>
+            <div class="scanner-ring ring-inner"></div>
+            <div class="scanner-sweep"></div>
+            <div class="scanner-dot dot-one"></div>
+            <div class="scanner-dot dot-two"></div>
+            <div class="scanner-center"><span></span></div>
+            <div class="scanner-label label-top">AMBIENTE // CALMO</div>
+            <div class="scanner-label label-bottom">READY TO SCAN</div>
+          </div>
+
+          <button class="primary-button reveal reveal-delay-2" id="start-button" type="button">
+            <span>Iniciar detecção</span><strong aria-hidden="true">↗</strong>
+          </button>
+          <p class="microcopy reveal reveal-delay-2">sem sustos · sem sons · só tranquilidade</p>
+        </section>
+
+        <section class="screen screen-scan" data-screen="scan" aria-labelledby="scan-title" aria-hidden="true">
+          <div class="scan-heading">
+            <p class="eyebrow"><span class="pulse-dot"></span> análise em andamento</p>
+            <h2 id="scan-title">Lendo o ambiente<span class="blink">_</span></h2>
+          </div>
+          <div class="scanner scanner-active" aria-hidden="true">
+            <div class="scanner-halo"></div>
+            <div class="scanner-grid"></div>
+            <div class="scanner-ring ring-outer"></div>
+            <div class="scanner-ring ring-middle"></div>
+            <div class="scanner-ring ring-inner"></div>
+            <div class="scanner-sweep"></div>
+            <div class="scanner-dot dot-one"></div>
+            <div class="scanner-dot dot-two"></div>
+            <div class="scanner-center"><span></span></div>
+            <div class="scan-crosshair crosshair-x"></div>
+            <div class="scan-crosshair crosshair-y"></div>
+          </div>
+          <div class="scan-status">
+            <div class="scan-status-row"><span id="scan-message">Iniciando varredura...</span><span id="scan-percent">0%</span></div>
+            <div class="progress-track"><div class="progress-bar" id="progress-bar"></div></div>
+            <div class="scan-meta"><span>FREQUÊNCIA ESTÁVEL</span><span>SETOR 01 / 01</span></div>
+          </div>
+        </section>
+
+        <section class="screen screen-result" data-screen="result" aria-labelledby="result-title" aria-hidden="true">
+          <div class="result-header">
+            <div class="result-stamp"><span>✓</span> varredura concluída</div>
+            <p class="result-number">01<span>/01</span></p>
+          </div>
+          <div class="result-icon" aria-hidden="true">✦</div>
+          <h2 id="result-title">Nenhum espírito<br /><em>encontrado</em> <span class="ghost">👻</span><span class="cross">×</span></h2>
+          <p class="result-text">A varredura foi concluída e não foram detectadas presenças espirituais no ambiente.</p>
+          <div class="calm-note"><span>♡</span><p>Tudo parece estar tranquilo.<br /><strong>Respire fundo e fique de boa.</strong></p></div>
+
+          <div class="comfort-section">
+            <p class="eyebrow"><span></span> um momento de calma</p>
+            <h3>Para ficar ainda mais tranquilo</h3>
+            <div class="prayer-card">
+              <div class="prayer-symbol" aria-hidden="true">☼</div>
+              <p class="prayer-label">oração da menina izaldinha</p>
+              <p id="prayer-text">ORACAO_MENINA_IZALDINHA</p>
+            </div>
+          </div>
+
+          <div class="distraction-section">
+            <p class="eyebrow"><span></span> próximo passo</p>
+            <h3>Agora vamos pensar<br />em outra coisa <span>😊</span></h3>
+            <div class="activity-card"><span id="activity-icon">🎵</span><p id="activity-text">Coloque uma música que você gosta e relaxe um pouco.</p></div>
+          </div>
+
+          <button class="secondary-button" id="restart-button" type="button"><span>Fazer nova varredura</span><strong aria-hidden="true">↻</strong></button>
+        </section>
+      </main>
+      <footer><span>NW / SAFE MODE</span><span>tudo sob controle</span></footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
